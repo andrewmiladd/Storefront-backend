@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const orders_1 = require("../../Handlers/orders");
+const Validation_1 = require("../../middlewares/Validation");
+const ordersRoutes = (0, express_1.Router)();
+ordersRoutes.get('/', Validation_1.validateToken, orders_1.allOrders);
+ordersRoutes.get('/:userId', Validation_1.validateToken, orders_1.OneOrder);
+ordersRoutes.post('/', Validation_1.validateToken, orders_1.createdOrder);
+ordersRoutes.post('/orders/:id/products', Validation_1.validateToken, orders_1.addingProduct);
+exports.default = ordersRoutes;
