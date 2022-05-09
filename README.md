@@ -23,7 +23,7 @@ to run the server = yarn start || npm run start
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.15",
     "pg": "^8.5.1"
-  },
+  
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
